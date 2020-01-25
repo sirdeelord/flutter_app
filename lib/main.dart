@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/bottom_bar.dart';
 
+import 'cookie_page.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -96,6 +98,18 @@ class _MyHomePageState extends State<MyHomePage>
                             )
                         ),
                     ],
+                ),
+                Container(
+                    height: MediaQuery.of(context).size.height - 30.0,
+                    width: double.infinity,
+                    child: TabBarView(
+                        controller: _tabController,
+                        children: [
+                            CookiePage(),
+                            CookiePage(),
+                            CookiePage(),
+                        ],
+                    ),
                 )
             ],
         ),
