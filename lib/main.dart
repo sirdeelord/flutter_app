@@ -33,6 +33,8 @@ class _MyHomePageState extends State<MyHomePage>
     @override
     Widget build(BuildContext context) {
         return Scaffold(
+
+
             appBar: AppBar(
                 backgroundColor: Colors.white,
                 elevation: 0.0,
@@ -52,6 +54,9 @@ class _MyHomePageState extends State<MyHomePage>
                     onPressed: () {})
             ],
         ),
+
+
+
         body: ListView(
             padding: EdgeInsets.only(left: 20.0),
             children: <Widget>[
@@ -113,9 +118,10 @@ class _MyHomePageState extends State<MyHomePage>
                 )
             ],
         ),
-        floatingActionButton: FloatingActionButton(onPressed: () {},
-        backgroundColor: Color(0xFFF17532),
-        child: Icon(Icons.fastfood)
+        floatingActionButton: FloatingActionButton(
+            onPressed: () {},
+            backgroundColor: Color(0xFFF17532),
+            child: Icon(Icons.fastfood)
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         bottomNavigationBar: BottomBar(),

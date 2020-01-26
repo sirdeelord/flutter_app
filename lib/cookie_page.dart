@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/cookie_detail.dart';
 
 class CookiePage extends StatelessWidget {
     @override
@@ -20,12 +21,13 @@ class CookiePage extends StatelessWidget {
                             childAspectRatio: 0.8,
                             children: <Widget>[
                                 _buildCard('Placeholder', '\$3.99', 'imgGif', false, true, context),
-                                _buildCard('Placeholder', '\$3.99', 'imgGif', false, false, context),
-                                _buildCard('Placeholder', '\$3.99', 'imgGif', false, false, context),
+                                _buildCard('Placeholder', '\$2.99', 'imgGif', false, false, context),
+                                _buildCard('Placeholder', '\$7.99', 'imgGif', false, false, context),
                                 _buildCard('Placeholder', '\$3.99', 'imgGif', false, false, context),
                             ],
                         ),
-                    )
+                    ),
+                    SizedBox(height: 15.0)
                 ],
             ),
         );
@@ -36,7 +38,17 @@ class CookiePage extends StatelessWidget {
         return Padding(
             padding: EdgeInsets.only(top: 15.0, bottom: .0, left: 5.0, right: 5.0),
             child: InkWell(
-                onTap: () {},
+                onTap: () {
+                    Navigator.of(context).push(
+                        MaterialPageRoute(
+                            builder: (context) => CookieDetail(
+                                assetPath: imgPath,
+                                cookieprice: price,
+                                cookiename: name,
+                            )
+                        )
+                    );
+                },
                 child: Container(
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15.0),
@@ -83,11 +95,42 @@ class CookiePage extends StatelessWidget {
                             ),
                             Text(name,
                                 style: TextStyle(
-                                    color: Color(0xFFCC8053),
+                                    color: Color(0xFF575E67),
                                     fontFamily: 'Varela',
                                     fontSize: 14.0
                                 ),
                             ),
+                            Padding(
+                                padding: EdgeInsets.all(8.0),
+                                child: Container(
+                                    color: Color(0xFFEBEBEB),
+                                )
+                            ),
+                            Padding(
+                                padding: EdgeInsets.only(left: 5.0, right: 5.0),
+                                child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                        if(!added) ...[
+                                            Icon(Icons.shopping_basket,
+                                                color: Color(0xFFD17E50),
+                                                size: 12.0
+                                            ),
+                                            Text('Add to cart',
+                                                style: TextStyle(
+                                                    fontFamily: 'Valera',
+                                                    color: Color(0xFFD17E50),
+                                                    fontSize: 12.0
+                                                )
+                                            ),
+                                            Icon(
+                                                Icons.add_circle_outline, 
+                                                color: Color(0xFFd17E50), 
+                                                size: 12.0
+                                            )
+                                        ]
+                                ]),
+                            )
                         ]
                     ),
                 ),
