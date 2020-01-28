@@ -11,7 +11,7 @@ class CookiePage extends StatelessWidget {
                     SizedBox(height: 15.0),
                     Container(
                         padding: EdgeInsets.only(right: 15.0),
-                        width: MediaQuery.of(context).size.width - 30.0,
+                        width: MediaQuery.of(context).size.width - 50.0,
                         height: MediaQuery.of(context).size.height - 50.0,
                         child: GridView.count(
                             crossAxisCount: 2,
@@ -20,10 +20,10 @@ class CookiePage extends StatelessWidget {
                             mainAxisSpacing: 15.0,
                             childAspectRatio: 0.8,
                             children: <Widget>[
-                                _buildCard('Placeholder', '\$3.99', 'imgGif', false, true, context),
-                                _buildCard('Placeholder', '\$2.99', 'imgGif', false, false, context),
-                                _buildCard('Placeholder', '\$7.99', 'imgGif', false, false, context),
-                                _buildCard('Placeholder', '\$3.99', 'imgGif', false, false, context),
+                                _buildCard('Placeholder', '\$3.99', 'images/img-placeholder.jpeg', false, true, context),
+                                _buildCard('Placeholder', '\$2.99', 'images/img-placeholder.jpeg', false, false, context),
+                                _buildCard('Placeholder', '\$7.99', 'images/img-placeholder.jpeg', false, false, context),
+                                _buildCard('Placeholder', '\$3.99', 'images/img-placeholder.jpeg', false, false, context),
                             ],
                         ),
                     ),
