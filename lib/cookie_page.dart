@@ -21,7 +21,7 @@ class CookiePage extends StatelessWidget {
                             childAspectRatio: 0.8,
                             children: <Widget>[
                                 _buildCard('Placeholder', '\$3.99', 'images/img-placeholder.jpeg', false, true, context),
-                                _buildCard('Placeholder', '\$2.99', 'images/img-placeholder.jpeg', false, false, context),
+                                _buildCard('Placeholder', '\$2.99', 'images/img-placeholder.jpeg', true, false, context),
                                 _buildCard('Placeholder', '\$7.99', 'images/img-placeholder.jpeg', false, false, context),
                                 _buildCard('Placeholder', '\$3.99', 'images/img-placeholder.jpeg', false, false, context),
                             ],
@@ -36,7 +36,7 @@ class CookiePage extends StatelessWidget {
     Widget _buildCard(String name, String price, 
         String imgPath, bool added, bool isFavorite, context) {
         return Padding(
-            padding: EdgeInsets.only(top: 15.0, bottom: .0, left: 5.0, right: 5.0),
+            padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
             child: InkWell(
                 onTap: () {
                     Navigator.of(context).push(
@@ -76,7 +76,7 @@ class CookiePage extends StatelessWidget {
                             Hero(
                                 tag: imgPath,
                                 child: Container(
-                                    height: 75.0,
+                                    height: 85.0,
                                     decoration: BoxDecoration(
                                         image: DecorationImage(
                                             image: AssetImage(imgPath),
@@ -101,9 +101,10 @@ class CookiePage extends StatelessWidget {
                                 ),
                             ),
                             Padding(
-                                padding: EdgeInsets.all(8.0),
+                                padding: EdgeInsets.all(18.0),
                                 child: Container(
                                     color: Color(0xFFEBEBEB),
+                                    height: 1.0,
                                 )
                             ),
                             Padding(
@@ -122,12 +123,24 @@ class CookiePage extends StatelessWidget {
                                                     color: Color(0xFFD17E50),
                                                     fontSize: 12.0
                                                 )
-                                            ),
+                                            ), 
+                                            Icon(Icons.add_circle_outline, color: Color(0xFFD17E50), size: 12.0)                                          
+                                        ],
+                                        if(added) ...[
                                             Icon(
-                                                Icons.add_circle_outline, 
-                                                color: Color(0xFFd17E50), 
-                                                size: 12.0
-                                            )
+                                                Icons.remove_circle_outline,
+                                                color: Color(0xFFD17E50),
+                                                size: 12.0,
+                                            ),
+                                            Text('3',
+                                                style: TextStyle(
+                                                    fontFamily: 'Valera',
+                                                    color: Color(0xFFD17E50),
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 12.0
+                                                ),
+                                            ),
+                                            Icon(Icons.add_circle_outline, color: Color(0xFFD17E50), size: 12.0)
                                         ]
                                 ]),
                             )

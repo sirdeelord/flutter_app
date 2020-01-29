@@ -9,27 +9,27 @@ class CookieDetail extends StatelessWidget {
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-            appBar: AppBar(
-                backgroundColor: Colors.white,
-                elevation: 0.0,
-                centerTitle: true,
-                leading: IconButton(
-                    icon: Icon(Icons.arrow_back, color: Color(0xFF545D68)),
-                    onPressed: () {
-                        Navigator.of(context).pop();
-                    },
-                ),
-                title: Text(
-                    'Pickup',
-                    style: TextStyle(
-                    fontFamily: 'Varela', fontSize: 20.0, color: Color(0xFF545D68)),
-                ),
-                actions: <Widget>[
-                    IconButton(
-                        icon: Icon(Icons.notifications_none, color: Color(0xFF545D68)),
-                        onPressed: () {})
-                ],
-            ),
+            // appBar: AppBar(
+            //     backgroundColor: Colors.white,
+            //     elevation: 0.0,
+            //     centerTitle: true,
+            //     leading: IconButton(
+            //         icon: Icon(Icons.arrow_back, color: Color(0xFF545D68)),
+            //         onPressed: () {
+            //             Navigator.of(context).pop();
+            //         },
+            //     ),
+            //     title: Text(
+            //         'Pickup',
+            //         style: TextStyle(
+            //         fontFamily: 'Varela', fontSize: 20.0, color: Color(0xFF545D68)),
+            //     ),
+            //     actions: <Widget>[
+            //         IconButton(
+            //             icon: Icon(Icons.notifications_none, color: Color(0xFF545D68)),
+            //             onPressed: () {})
+            //     ],
+            // ),
 
             body: ListView(
                 children: [
@@ -54,17 +54,37 @@ class CookieDetail extends StatelessWidget {
                             fit: BoxFit.contain
                         ),
                     ),
-                    SizedBox(height: 20.0)
+                    SizedBox(height: 20.0),
+                    Center(
+                        child: Container(
+                            width: MediaQuery.of(context).size.width - 50.0,
+                            height: 50.0,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(25.0),
+                                color: Color(0xFFF17532)
+                            ),
+                            child: Center(
+                                child: Text('Add to cart',
+                                    style: TextStyle(
+                                        fontFamily: 'Valera',
+                                        fontSize: 14.0,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white
+                                    ),
+                                )
+                            ),
+                        ),
+                    )
                 ]
             ),
 
-            floatingActionButton: FloatingActionButton(
-                onPressed: () {},
-                backgroundColor: Color(0xFFF17532),
-                child: Icon(Icons.fastfood)
-            ),
-            floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-            bottomNavigationBar: BottomBar(),
+            // floatingActionButton: FloatingActionButton(
+            //     onPressed: () {},
+            //     backgroundColor: Color(0xFFF17532),
+            //     child: Icon(Icons.fastfood)
+            // ),
+            // floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+            // bottomNavigationBar: BottomBar(),
         );
     }
 }
