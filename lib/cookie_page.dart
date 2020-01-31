@@ -21,9 +21,9 @@ class CookiePage extends StatelessWidget {
                             childAspectRatio: 0.8,
                             children: <Widget>[
                                 _buildCard('Placeholder', '\$3.99', 'images/img-placeholder.jpeg', false, true, context),
-                                _buildCard('Placeholder', '\$2.99', 'images/img-placeholder.jpeg', true, false, context),
-                                _buildCard('Placeholder', '\$7.99', 'images/img-placeholder.jpeg', false, false, context),
-                                _buildCard('Placeholder', '\$3.99', 'images/img-placeholder.jpeg', false, false, context),
+                                _buildCard('Placeholder', '\$2.99', 'images/img-placeholder_1.jpeg', true, false, context),
+                                _buildCard('Placeholder', '\$7.99', 'images/img-placeholder_2.jpeg', false, false, context),
+                                _buildCard('Placeholder', '\$3.99', 'images/img-placeholder_3.jpeg', false, false, context),
                             ],
                         ),
                     ),

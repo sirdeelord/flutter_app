@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/bottom_bar.dart';
-
-import 'cookie_page.dart';
+import 'package:flutter_app/cookie_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -33,8 +32,6 @@ class _MyHomePageState extends State<MyHomePage>
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-
-
             appBar: AppBar(
                 backgroundColor: Colors.white,
                 elevation: 0.0,
@@ -54,8 +51,6 @@ class _MyHomePageState extends State<MyHomePage>
                     onPressed: () {})
             ],
         ),
-
-
 
         body: ListView(
             padding: EdgeInsets.only(left: 20.0),
@@ -125,6 +120,5 @@ class _MyHomePageState extends State<MyHomePage>
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         bottomNavigationBar: BottomBar(),
-    );
-  }
+    );}
 }
